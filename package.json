@@ -1,0 +1,23 @@
+{
+  "name": "open-zep-gsn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpfloyd/open-zep-gsn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lpfloyd/open-zep-gsn/issues"
+  },
+  "homepage": "https://github.com/lpfloyd/open-zep-gsn#readme",
+  "dependencies": {
+    "@openzeppelin/network": "^0.4.2"
+  }
+}
