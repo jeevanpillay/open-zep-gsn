@@ -1,14 +1,16 @@
 // client/src/App.js
 import React, { useState, useEffect, useCallback } from "react";
-import { useWeb3Network } from "@openzeppelin/network/react";
+import { useWeb3Network, useEphemeralKey } from "@openzeppelin/network/react";
 
-const PROVIDER_URL = "http://127.0.0.1:8545";
+const INFURA_API_TOKEN = "58b66fe4d7294877ae3372a3fb8d7ac6";
 
 function App() {
-  // get GSN web3
-  const context = useWeb3Network(PROVIDER_URL, {
-    gsn: { dev: true }
-  });
+  const context = useWeb3Network(
+    "https://rinkeby.infura.io/v3/" + INFURA_API_TOKEN,
+    {
+      gsn: { signKey: useEphemeralKey() }
+    }
+  );
 
   const { accounts, lib } = context;
 
